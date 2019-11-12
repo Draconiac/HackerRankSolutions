@@ -11,6 +11,7 @@ class Solution24
         if(head.next != null){
             if(head.data == head.next.data){
                 head.next = head.next.next;
+                removeDuplicates(head);
             }else{
                 removeDuplicates(head.next);
             }
