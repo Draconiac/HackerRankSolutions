@@ -10,43 +10,29 @@ class Solution26{
 
         Scanner sc = new Scanner(System.in);
         String[] returnDate = sc.nextLine().split(" ");
-        String[] expectedDate = sc.nextLine().split( " ");
+        String[] expectedDate = sc.nextLine().split(" ");
         sc.close();
         int day = Integer.parseInt(expectedDate[0]) - Integer.parseInt(returnDate[0]);
         int month = Integer.parseInt(expectedDate[1]) - Integer.parseInt(returnDate[1]);
         int year = Integer.parseInt(expectedDate[2]) - Integer.parseInt(returnDate[2]);
 
-//        if(day >= 0 && month >= 0 && year >= 0){
-//            System.out.println("0");
-//        }else if(day < 0 && month == 0 && year == 0){
-//            System.out.println(15 * (day * -1));
-//        }else if(month < 0 && year == 0){
-//            System.out.println(500 * (month * -1));
-//        }else if(year < 0){
-//            System.out.println("10000");
-//        }
-
-        if(year > 0){
+        if (year > 0 || (year == 0 && month > 0) || (year == 0 && month == 0 && day > 0)) {
             System.out.println("0");
-        }else{
-            if(month > 0){
-                System.out.println("0");
-            }else{
-                if(day >= 0){
-                    System.out.println("0");
-                }else{
-                    System.out.println(15 * (day * -1));
-                }
-                System.out.println(500 * (month * -1));
-            }
+        } else if (day < 0 && month == 0 && year == 0) {
+            System.out.println(15 * (day * -1));
+        } else if (month < 0 && year == 0) {
+            System.out.println(500 * (month * -1));
+        } else if (year < 0) {
             System.out.println("10000");
         }
-
-
     }
-
 }
 /*
+
+31 12 2009
+1 1 2010
+
+
 31 8 2004
 20 1 2004
 3500
