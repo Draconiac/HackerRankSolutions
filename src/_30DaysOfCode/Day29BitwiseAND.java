@@ -33,7 +33,6 @@ public class Day29BitwiseAND {
                     max = a.intValue();
             }
 
-            System.out.println(max);
         }
 
         scanner.close();
