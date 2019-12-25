@@ -9,25 +9,20 @@ import static java.util.stream.Collectors.toList;
 public class BirthdayChocolate {
 
     static int birthday(List<Integer> s, int d, int m) {
-        int match = 0;
+        int match=0;
         if(s.size() == 1 && s.get(0) == d)
             return 1;
-        for(int i=0; i < s.size(); i++){
-            int current = s.get(i);
-            if(i + m < s.size()) {
-                for (int k = i + 1; k < i + m; k++) {
-                    current += s.get(k);
-                    if (current > d)
-                        break;
-                    if (current == d) {
-                        match++;
-                        break;
-                    }
-                }
+        for(int i=0; i<=s.size()-m ;i++){
+            int tot = s.get(i);
+            for(int k = 1; k < m; k++){
+                tot+= s.get(k+i);
+                if(tot > d)
+                    break;
             }
+            if(tot == d)
+                match++;
         }
         return match;
-
     }
 
     public static void main(String[] args) throws IOException {
