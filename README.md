@@ -1,3 +1,3 @@
 # HackerRankSolutions
 HackerRank Solutions
-Some Design Pattern Examples
+</br>Some Design Pattern Examples
