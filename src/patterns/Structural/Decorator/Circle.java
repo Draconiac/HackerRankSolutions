@@ -1,4 +1,4 @@
-package patterns.Decorator;
+package patterns.Structural.Decorator;
 
 public class Circle implements Shape{
     @Override

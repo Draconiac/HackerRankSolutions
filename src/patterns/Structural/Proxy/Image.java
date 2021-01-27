@@ -1,4 +1,4 @@
-package patterns.Proxy;
+package patterns.Structural.Proxy;
 
 public interface Image {
 

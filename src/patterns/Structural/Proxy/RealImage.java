@@ -1,4 +1,4 @@
-package patterns.Proxy;
+package patterns.Structural.Proxy;
 
 public class RealImage  implements Image{
 
